@@ -1,0 +1,75 @@
+import React from 'react'
+import styled from 'styled-components';
+import { FaGithub } from "react-icons/fa";
+
+
+
+export const chipslist = [
+  {
+    id: 1,
+    title: 'Atoms',
+    linkto: './Atoms',
+    icon: <FaGithub />,
+    backgroundColor: '#4b6cb7',
+    color: 'white'
+  },
+  {
+    id: 2,
+    title: 'Design',
+    linkto: './Design',
+    icon: <FaGithub />,
+    backgroundColor: '#F48FB1',
+    color: 'black'
+  },
+  {
+    id: 3,
+    title: 'Prototype',
+    linkto: './Prototype',
+    icon: <FaGithub />,
+    backgroundColor: '#E0E0E0',
+    color: 'black'
+  }
+];
+
+
+function Chips() {
+  return (
+    <StyledChipwrapper>
+    {chipslist.map(chip => (
+      <StyledChip key={chip.id} style={{ backgroundColor: chip.backgroundColor, color: chip.color }}>
+        {chip.icon} <StyledLink to={chip.linkto}>{chip.title}</StyledLink>
+      </StyledChip>
+    ))}
+  </StyledChipwrapper>
+)
+};
+export default Chips;
+
+export const StyledChipwrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 3em 0 1em 0;
+`;
+
+export const StyledChip = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #2d416e;
+  border-radius: 0.5rem;
+  padding: .5em;
+  margin: 0 0.2rem;
+
+`;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  padding-left: 0.3rem; 
+  color: inherit;
+  font-size: 1.125em;
+  font-weight: 400;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
