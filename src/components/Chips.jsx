@@ -1,31 +1,32 @@
 import React from 'react'
 import styled from 'styled-components';
 import { FaGithub } from "react-icons/fa";
+import { PiPuzzlePieceDuotone } from "react-icons/pi";
 
 
 
 export const chipslist = [
   {
     id: 1,
-    title: 'Atoms',
-    linkto: './Atoms',
-    icon: <FaGithub />,
+    title: 'Challenge',
+    linkto: './Challenge',
+    icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#4b6cb7',
     color: 'white'
   },
   {
     id: 2,
-    title: 'Design',
-    linkto: './Design',
-    icon: <FaGithub />,
+    title: 'Setup',
+    linkto: './Setup',
+    icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#F48FB1',
     color: 'black'
   },
   {
     id: 3,
-    title: 'Prototype',
-    linkto: './Prototype',
-    icon: <FaGithub />,
+    title: 'Execute',
+    linkto: './Execute',
+    icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#E0E0E0',
     color: 'black'
   }

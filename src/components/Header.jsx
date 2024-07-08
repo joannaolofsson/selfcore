@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StyledH2, StyledP } from '../Styles'
+import { PiUserCircleGearDuotone } from "react-icons/pi";
+
 
 function Header({ toggleSidebar }) {
   return (
     <StyledHeader>
       <div className='header_search'><StyledH2>Lifebase</StyledH2></div>
-      <div className='header_avatar'><StyledP>Logout</StyledP></div>
+      {/*
+      <div className='header_avatar'><StyledP>Logout</StyledP></div>*/}
       <StyledMenuButton onClick={toggleSidebar}>
-        <strong>&#9776;</strong>
+      <PiUserCircleGearDuotone size={40}/>
       </StyledMenuButton>
     </StyledHeader>
   );

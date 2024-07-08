@@ -6,38 +6,36 @@ import { FaBlog } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RxAlignBaseline } from "react-icons/rx";
 import { StyledH3, StyledP } from '../Styles';
+import xIconImg from '../assets/x-letter.png';
+
 
 
 const Aside = ({ isActive, toggleAside }) => {
    
   return (
     <StyledAsideContainer $isActive={isActive}>
-      <StyledCloseButton onClick={toggleAside}>X</StyledCloseButton>
+      <StyledCloseImg onClick={toggleAside} src={xIconImg} alt="close Icon" />
         <StyledIconbar>
           <StyledUlbar>
-            <StyledLibar><RxAlignBaseline size={24}/></StyledLibar>
-            <StyledLibar><BsFillPersonLinesFill size={24}/></StyledLibar>
-            <StyledLibar><FaBlog size={24}/></StyledLibar>
+            <StyledLibar><StyledLink to="/"><BsFillPersonLinesFill size={24}/></StyledLink></StyledLibar>
+            <StyledLibar><StyledLink to="/"><FaBlog size={24}/></StyledLink></StyledLibar>
+            <StyledLibar><StyledLink to="/"><RxAlignBaseline size={24}/></StyledLink></StyledLibar>
           </StyledUlbar>
         </StyledIconbar>
 
         <StyledTopicFeed> 
           <StyledTopicUl>
             <StyledTopicLi>
-                <StyledH3>Info 1</StyledH3>
-                <StyledP>Random text</StyledP>
+                <StyledH3>Select your areas</StyledH3>
+                <StyledP>Pick 1-3 areas</StyledP>
             </StyledTopicLi>
             <StyledTopicLi>
-                <StyledH3>Info 2</StyledH3>
-                <StyledP>Random text</StyledP>
+                <StyledH3>Pick your challenge</StyledH3>
+                <StyledP>For how long?</StyledP>
             </StyledTopicLi>
             <StyledTopicLi>
-                <StyledH3>Info 3</StyledH3>
-                <StyledP>Random text</StyledP>
-            </StyledTopicLi>
-            <StyledTopicLi>
-                <StyledH3>Info 4</StyledH3>
-                <StyledP>Random text</StyledP>
+                <StyledH3>How can we help you?</StyledH3>
+                <StyledP>Tell us how we can support you</StyledP>
             </StyledTopicLi>
           </StyledTopicUl>
         </StyledTopicFeed>
@@ -73,18 +71,22 @@ const StyledAsideContainer = styled.div`
     `;
 
 
-const StyledCloseButton = styled.button`
+const StyledCloseImg = styled.img`
     background: none;
 
   @media only screen and (min-width: 600px) {
+    width: 30px;
     position: absolute;
     top: 1.5em;
     right: 1.5em;
     cursor: pointer;
-    background: none;
+    background: #F48FB1;
     color: white;
     border: none;
     font-size: 1em;
+    padding: 3px;
+    border-radius: 5px;
+
 }
     &:hover {
         color: lightcoral;
@@ -117,9 +119,13 @@ const StyledUlbar = styled.ul`
 `;
 
 const StyledLibar = styled.li`
-  padding: 4em 1.5em 1.5em 1.5em;
+  padding: 5em 1.5em 1.5em 1.5em;
 `;
 
+// Add tooltip //
+const StyledLink = styled(Link) `
+  color: #F48FB1;
+`;
 
 // Detta är nyhetsflödet //
 const StyledTopicFeed = styled.div`
@@ -136,7 +142,7 @@ const StyledTopicFeed = styled.div`
 
 const StyledTopicUl = styled.ul`
 
-  margin: 3rem 0 0 0;
+  margin: 4em 0 0 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
