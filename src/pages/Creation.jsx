@@ -1,9 +1,9 @@
 import React from 'react'
 
-function MyBase() {
+function Creation() {
   return (
     <div>MyBase</div>
   )
 }
 
-export default MyBase
+export default Creation

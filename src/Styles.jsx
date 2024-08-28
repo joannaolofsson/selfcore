@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const StyledContainer = styled.div`
+  margin: 2em;
+`;
+
 export const StyledH1 = styled.h1`
   font-family: "Syne", sans-serif;
   font-size: 36px;
@@ -41,3 +45,8 @@ export const StyledP = styled.p`
   color: white;
   line-height: 1.5rem;
 `;
+
+export const StyledHeadingwrapper = styled.div`
+  padding: 1em 0;
+`;
+

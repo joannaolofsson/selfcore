@@ -8,15 +8,15 @@ import { PiPuzzlePieceDuotone } from "react-icons/pi";
 export const chipslist = [
   {
     id: 1,
-    title: 'Challenge',
-    linkto: './Challenge',
+    title: 'Tech',
+    linkto: './Tech',
     icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#4b6cb7',
     color: 'white'
   },
   {
     id: 2,
-    title: 'Setup',
+    title: 'Mental',
     linkto: './Setup',
     icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#F48FB1',
@@ -24,7 +24,7 @@ export const chipslist = [
   },
   {
     id: 3,
-    title: 'Execute',
+    title: 'Routine',
     linkto: './Execute',
     icon: <PiPuzzlePieceDuotone size={20}/>,
     backgroundColor: '#E0E0E0',

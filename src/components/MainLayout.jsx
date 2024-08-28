@@ -7,7 +7,7 @@ import Header from './Header';
 
 const MainLayout = () => {
   const [isAsideActive, setIsAsideActive] = useState(false);
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 600px)' });
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 768px)' });
 
   const toggleAside = () => {
     setIsAsideActive(!isAsideActive);

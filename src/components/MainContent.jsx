@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { StyledH1, StyledP, StyledH3 } from '../Styles';
-import Chips from './Chips';
+import { StyledH1, StyledP, StyledH3, StyledHeadingwrapper } from '../Styles';
 import summerImg from '../assets/summer.jpg';
+import { Link } from 'react-router-dom';
 
 
-
-
-const subjects = ['Health app', 'New job', 'Weightloss', 'Recipes', 'Fitness app'];
+const subjects = ['Habits', 'Daily routines', 'Positive psychology', 'New apps', 'Strong mind'];
 
 const Dashboard = ({ isAsideActive }) => {
   const [selectedSubjects, setSelectedSubjects] = useState([]);
@@ -60,51 +58,66 @@ const Dashboard = ({ isAsideActive }) => {
     <StyledMain isAsideActive={isAsideActive}>
       <StyledCardWrapper>
         <StyledCard>
-          <StyledH1>What do you want to change in your life this fall?</StyledH1>
-
-        </StyledCard>
-        <StyledCard>
-
-        <StyledHeadingwrapper>
-          <StyledH3>You got this!!!</StyledH3>
+          <StyledHeadingwrapper>
+          <StyledH1>Struggling to get your life to work for you?</StyledH1>
           </StyledHeadingwrapper>
-          <StyledP>One day at a time and all of a sudden it's Christmas</StyledP>
+          <StyledP>Create your Lifebase, with your favorite tech and mental tools</StyledP>
         </StyledCard>
+        
         <StyledCard>
-        <StyledImg src={summerImg} alt="image fitness "/>
+          <Link to="Quote">
         <StyledContent>
           <StyledHeadingwrapper>
-  
-          <StyledH3>What is Lifebase?</StyledH3>
+          {/*Create an array of inspiring quotes to choose from*/}
+          <StyledH3>You got this</StyledH3>
           </StyledHeadingwrapper><StyledHeadingwrapper>
-          <StyledP>Lifebase is a web project about creating a base for your life with the help of tech</StyledP>
-          </StyledHeadingwrapper><StyledHeadingwrapper>
-          <StyledP>In this project I combine my experience in behavior therapy with my skills in design and coding, using myself as a guinny pig.</StyledP>
-            </StyledHeadingwrapper>
-            </StyledContent>  
+          <StyledP>Click here to choose your favorite quote</StyledP>
+          </StyledHeadingwrapper>
+            </StyledContent> 
+            </Link> 
         </StyledCard>
+
+        <StyledCard>
+          <Link to="Tech">
+        <StyledHeadingwrapper>
+          <StyledH3>Your tech</StyledH3>
+          </StyledHeadingwrapper>
+          <StyledP>Maybe you want to call it routines, habits or foundation</StyledP>
+          </Link>
+        </StyledCard>
+
+        <StyledCard>
+          <Link to="Mind">
+        <StyledHeadingwrapper>
+          <StyledH3>Your tools</StyledH3>
+          </StyledHeadingwrapper>
+          <StyledP>Here you choose the apps, websites and tech stuff that supports your life</StyledP>
+          </Link>
+        </StyledCard>
+
+        <StyledCard>
+          <Link to ="Foundation">
+        <StyledHeadingwrapper>
+          <StyledH3>Your foundation</StyledH3>
+          </StyledHeadingwrapper>
+          <StyledP>What kind of tools can you trust to build your Lifebase.</StyledP>
+          </Link>
+        </StyledCard>
+
         <StyledCard>
         <StyledHeadingwrapper>
-          <StyledH3>Process</StyledH3>
+          <StyledH3>Time for creation</StyledH3>
           </StyledHeadingwrapper>
           <StyledP>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem debitis non cupiditate sunt in doloremque nobis sequi, maiores ipsum? Temporibus modi incidunt et deleniti fugit quibusdam assumenda ducimus eos harum?</StyledP>
-          <Chips />
-                    
-  
         </StyledCard>
+        
         <StyledCard>
-          <StyledHeadingwrapper>
-          <StyledH3>To make it stick</StyledH3>
-          </StyledHeadingwrapper>
-          <StyledP>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam culpa ad corrupti! Consectetur quis, temporibus, eos possimus cumque tempora quo exercitationem inventore ducimus reiciendis fugiat! Voluptatibus similique mollitia eaque vitae.</StyledP>
-        </StyledCard>
-        <StyledCard>
-
         <StyledHeadingwrapper>
+        <StyledImg src={summerImg} alt="image fitness "/>
           <StyledH3>What do you need to make it?</StyledH3>
           </StyledHeadingwrapper>
           <StyledP>All the things you have tried, is behind you...</StyledP>
-          <StyledP>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus quisquam ducimus laudantium fuga distinctio corporis aliquam quo sunt consequatur! Tempore, repellat at? Commodi voluptatem beatae ex ducimus non numquam?</StyledP>
+         
         </StyledCard>
         <StyledCard>
           <StyledSubjectSelection>
@@ -153,7 +166,7 @@ const StyledCardWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 1rem;
+  gap: 2rem;
 
   @media only screen and (min-width: 600px) {
     grid-template-columns: 1fr;
@@ -187,13 +200,13 @@ const StyledCard = styled.div`
 
   }
   @media only screen and (min-width: 768px) {
-    grid-area: 1 / 1 / 2 / 4;
+    grid-area: 1 / 1 / 2 / 3;
   }
 }
 
 &:nth-child(2) {
   grid-area: 2 / 1 / 3 / 2;
-  padding: 1.5em;
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
     grid-area: 2 / 1 / 3 / 2;
@@ -201,26 +214,27 @@ const StyledCard = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 1 / 3 / 2 / 4;
   }
 }
 
 &:nth-child(3) {
   grid-area: 3 / 1 / 4 / 2;
-
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
     grid-area: 3 / 1 / 4 / 2;
+    width: 100%;
   }
 
   @media only screen and (min-width: 768px) {
-    grid-area: 2 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 3 / 2;
   }
 }
 
 &:nth-child(4) {
   grid-area: 4 / 1 / 5 / 2;
-  padding: 1.5em;
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
     grid-area: 4 / 1 / 5 / 2;
@@ -228,46 +242,62 @@ const StyledCard = styled.div`
 
   
   @media only screen and (min-width: 768px) {
-    grid-area: 2 / 2 / 3 / 5;
+    grid-area: 2 / 2 / 3 / 3;
   }
 }
 
-  &:nth-child(5) {
+
+&:nth-child(5) {
   grid-area: 5 / 1 / 6 / 2;
-  padding: 1.5em;
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
     grid-area: 5 / 1 / 6 / 2;
   }
 
+  
   @media only screen and (min-width: 768px) {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 2 / 3 / 3 / 4;
   }
 }
 
 &:nth-child(6) {
   grid-area: 6 / 1 / 7 / 2;
-  padding: 1.5em;
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
     grid-area: 6 / 1 / 7 / 2;
   }
 
+  
   @media only screen and (min-width: 768px) {
-    grid-area: 3 / 3 / 4 / 5;
+    grid-area: 3 / 1 / 4 / 3;
   }
 }
 
 &:nth-child(7) {
-  grid-area: 6 / 1 / 7 / 2;
-  padding: 1.5em;
+  grid-area: 7 / 1 / 8 / 2;
+  padding: 2em;
 
   @media only screen and (min-width: 600px) {
-    grid-area: 6 / 1 / 7 / 2;
+    grid-area: 7 / 1 / 8 / 2;
   }
 
   @media only screen and (min-width: 768px) {
-    grid-area: 4 / 1 / 5 / 5;
+    grid-area: 3 / 3 / 4 / 4;
+  }
+}
+
+&:nth-child(8) {
+  grid-area: 8 / 1 / 9 / 2;
+  padding: 2em;
+
+  @media only screen and (min-width: 600px) {
+    grid-area: 8 / 1 / 9 / 2;
+  }
+
+  @media only screen and (min-width: 768px) {
+    grid-area: 4 / 1 / 5 / 4;
   }
 }
 `;
@@ -280,10 +310,6 @@ const StyledImg = styled.img`
 const StyledContent = styled.div`
   padding: 1.5em;
 `
-
-const StyledHeadingwrapper = styled.div`
-  padding: 1em 0;
-`;
 const StyledSubjectSelection = styled.div`
   padding: 1em 0;
   border-bottom: 1px solid white;
