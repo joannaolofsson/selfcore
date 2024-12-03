@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components';
-import { FaGithub } from "react-icons/fa";
+
 import { PiPuzzlePieceDuotone } from "react-icons/pi";
+import '../index.css'
+import '../App.css'
 
 
 
@@ -35,42 +36,13 @@ export const chipslist = [
 
 function Chips() {
   return (
-    <StyledChipwrapper>
+    <section className='chip-wrapper'>
     {chipslist.map(chip => (
-      <StyledChip key={chip.id} style={{ backgroundColor: chip.backgroundColor, color: chip.color }}>
-        {chip.icon} <StyledLink to={chip.linkto}>{chip.title}</StyledLink>
-      </StyledChip>
+      <div className='chip' key={chip.id} style={{ backgroundColor: chip.backgroundColor, color: chip.color }}>
+        {chip.icon} <Link to={chip.linkto}>{chip.title}</Link>
+      </div>
     ))}
-  </StyledChipwrapper>
+  </section>
 )
 };
 export default Chips;
-
-export const StyledChipwrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 3em 0 1em 0;
-`;
-
-export const StyledChip = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid #2d416e;
-  border-radius: 0.5rem;
-  padding: .5em;
-  margin: 0 0.2rem;
-
-`;
-
-export const StyledLink = styled.a`
-  text-decoration: none;
-  padding-left: 0.3rem; 
-  color: inherit;
-  font-size: 1.125em;
-  font-weight: 400;
-  &:hover {
-    text-decoration: underline;
-  }
-`;

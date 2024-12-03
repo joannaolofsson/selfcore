@@ -1,19 +1,20 @@
 import React from 'react'
-import { StyledH2, StyledP, StyledHeadingwrapper, StyledContainer } from '../Styles'
+import '../index.css'
+import '../App.css'
 
 function Mind() {
   return (
-    <StyledContainer>
-      <StyledHeadingwrapper>
-      <StyledH2>Mind</StyledH2>
-      </StyledHeadingwrapper>
-      <StyledP>This is both the tools that I'm trying out and as well as my favorite tools, which I use everyday</StyledP>
+    <section className='mind-section'>
+
+      <h2>Mind</h2>
+
+      <p>This is both the tools that I'm trying out and as well as my favorite tools, which I use everyday</p>
       <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-    </StyledContainer>
+    </section>
   )
 }
 

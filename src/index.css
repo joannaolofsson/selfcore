@@ -8,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -17,17 +16,99 @@ body {
 
 body {
   color: pink;
-  background: #1e2b49;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0f1625, #26365c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0f1625, #26365c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1e2b49;  
+  background: -webkit-linear-gradient(to right, #0f1625, #26365c);  
+  background: linear-gradient(to right, #0f1625, #26365c); 
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Syne", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FF69B4;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.125em;
+  color: white;
+  line-height: 1.5rem;
+}
+
 a {
-  list-style-type: none;
   color: white;
   font-weight: 600;
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  margin-right: 1em;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: black; 
+
+  &:checked {
+    background-color: black;
+}
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: white;
+}
+
+header {
+  grid-area: 'header';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+
+  
+  @media only screen and (min-width: 600px) {
+    padding: 2rem;
+  }
+}
+
+footer {
+  grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #F48FB1;
+    padding: 2rem;
 }
 
 

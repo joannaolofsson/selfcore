@@ -1,23 +1,24 @@
 import React from 'react'
-import { StyledH2, StyledH4, StyledP, StyledHeadingwrapper, StyledContainer } from '../Styles'
+import '../index.css'
+import '../App.css'
 
 function Tech() {
   return (
-    <StyledContainer>
-      <StyledHeadingwrapper>
-      <StyledH2>Apps I need</StyledH2>
-      </StyledHeadingwrapper>
+    <section>
+
+      <h2>Apps I need</h2>
+
       <ul>
         <li>
-          <StyledH4>Bear</StyledH4>
-          <StyledP>Bear is an app that I always return back to for my daily notes</StyledP>
+          <h4>Bear</h4>
+          <h4>Bear is an app that I always return back to for my daily notes</h4>
           
 
         </li>
         <li></li>
         <li></li>
       </ul>
-    </StyledContainer>
+    </section>
   )
 }
 
